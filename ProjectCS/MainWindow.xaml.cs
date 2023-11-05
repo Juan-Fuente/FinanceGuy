@@ -34,10 +34,10 @@ namespace ProjectCS
 
         private void foodSelect(object sender, SelectionChangedEventArgs b)
         {
-            if (Class2.bills.Any(x => x.Name == (string)billsComboBox.SelectedItem))
+            if (Class2.foods.Any(x => x.Name == (string)billsComboBox.SelectedItem))
             {
 
-                var price = Class2.foods.Find(x => x.Name == (string)billsComboBox.SelectedItem);
+                var price = Class2.foods.Find(x => x.Name == (string)foodComboBox.SelectedItem);
                 var item = itemsDataGrid.Items.IndexOf(price);
                 if (item >= 0)
                 {
@@ -60,10 +60,94 @@ namespace ProjectCS
             }
         }
 
-        private void SalesTax(Class1 price)
+        private void billsSelect(object sender, SelectionChangedEventArgs b)
+        {
+            if (Class2.bills.Any(x => x.Name == (string)billsComboBox.SelectedItem))
+            {
+
+                var price = Class2.bills.Find(x => x.Name == (string)billsComboBox.SelectedItem);
+                var item = itemsDataGrid.Items.IndexOf(price);
+                if (item >= 0)
+                {
+                    itemsDataGrid.Items.Remove(price);
+                    price.Quantity++;
+                    itemsDataGrid.Items.Add(Class2.bills.Find(x => x.Name == (string)foodComboBox.SelectedItem));
+
+                    SalesTax(price);
+
+                    billsComboBox.SelectedIndex = -1;
+                }
+                else
+                {
+                    itemsDataGrid.Items.Add(Class2.bills.Find(x => x.Name == (string)billsComboBox.SelectedItem));
+
+                    SalesTax(price);
+
+                    billsComboBox.SelectedIndex = -1;
+                }
+            }
+        }
+
+        private void subsSelect(object sender, SelectionChangedEventArgs b)
+        {
+            if (Class2.subs.Any(x => x.Name == (string)subsComboBox.SelectedItem))
+            {
+
+                var price = Class2.subs.Find(x => x.Name == (string)subsComboBox.SelectedItem);
+                var item = itemsDataGrid.Items.IndexOf(price);
+                if (item >= 0)
+                {
+                    itemsDataGrid.Items.Remove(price);
+                    price.Quantity++;
+                    itemsDataGrid.Items.Add(Class2.subs.Find(x => x.Name == (string)subsComboBox.SelectedItem));
+
+                    SalesTax(price);
+
+                    subsComboBox.SelectedIndex = -1;
+                }
+                else
+                {
+                    itemsDataGrid.Items.Add(Class2.subs.Find(x => x.Name == (string)subsComboBox.SelectedItem));
+
+                    SalesTax(price);
+
+                    subsComboBox.SelectedIndex = -1;
+                }
+            }
+        }
+
+        private void outingsSelect(object sender, SelectionChangedEventArgs b)
+        {
+            if (Class2.outings.Any(x => x.Name == (string)outingsComboBox.SelectedItem))
+            {
+
+                var price = Class2.outings.Find(x => x.Name == (string)outingsComboBox.SelectedItem);
+                var item = itemsDataGrid.Items.IndexOf(price);
+                if (item >= 0)
+                {
+                    itemsDataGrid.Items.Remove(price);
+                    price.Quantity++;
+                    itemsDataGrid.Items.Add(Class2.outings.Find(x => x.Name == (string)outingsComboBox.SelectedItem));
+
+                    SalesTax(price);
+
+                    outingsComboBox.SelectedIndex = -1;
+                }
+                else
+                {
+                    itemsDataGrid.Items.Add(Class2.outings.Find(x => x.Name == (string)outingsComboBox.SelectedItem));
+
+                    SalesTax(price);
+
+                    outingsComboBox.SelectedIndex = -1;
+                }
+            }
+        }
+
+        private void SalesTax(Class1 Price)
         {
             decimal tax = 0.6M;
-            var salesTax = price.Price * tax;
+            var salesTax = Price.Price * tax;
             salesTax = Math.Round(salesTax, 1);
             if (salesTax < 0.1M)
             {
@@ -73,26 +157,13 @@ namespace ProjectCS
             Tax += salesTax;
             taxBlock.Text = Tax.ToString("C2");
 
-            CalculateTotal(price, salesTax);
+            CalculateTotal(Price, salesTax);
         }
-        private void CalculateTotal(Class1 price, decimal salesTax)
+        private void CalculateTotal(Class1 Price, decimal salesTax)
         {
-            var total = price.Price + salesTax;
+            var total = Price.Price + salesTax;
             Total += total;
             totalTextBlock.Text = Total.ToString("C2");
-        }
-
-    }
-        
-        
-        /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
-    {
-        public MainWindow()
-        {
-            InitializeComponent();
         }
     }
 }
