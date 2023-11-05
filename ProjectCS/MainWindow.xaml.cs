@@ -22,7 +22,7 @@ namespace ProjectCS
 
         private decimal Total { get; set; }
 
-    }
+    
 
     public MainWindow()
     {
@@ -31,11 +31,11 @@ namespace ProjectCS
 
 
     private void foodSelect(object sender, selectFood f)
-{ 
-        if (Items.Bills.Any(x => x.Name == (string) mainBillsBox.SelectedItem))
+    { 
+        if (Class2.bills.Any(x => x.Name == (string)mainBillsBox.SelectedItem))
     {
 
-        var price = Items.Bills.Find(x => x.Name == (string)mainBillsBox.SelctedItem);
+        var price = Items.fppds.Find(x => x.Name == (string)mainBillsBox.SelctedItem);
         var item = itemsDataGrid.Items.IndexOf(price);
         if (item >= 0)
         {
