@@ -212,13 +212,16 @@ namespace ProjectCS
                 item.Quantity = 1;
             }
         }
+            private void clearButton_Click(object sender, RoutedEventArgs e)
+            {
+                itemsDataGrid.Items.Clear();
+                Total = 0.00M;
+                Tax = 0.00M;
+                taxBlock.Text = "$0.00";
+                totalTextBlock.Text = "$0.00";
 
-
-
-
-
-
-
-
+                RemoveQuantity();
+            }
+        
     }
 }
