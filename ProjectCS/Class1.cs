@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace ProjectCS
 {
-    internal class Class1
+    public class Class1
     {
-        public string Food { get; set; }
+        public string Name { get; set; }
         public string Category { get; set; }
-        public string Quantity { get; set; }
-        public string Price { get; set; }
+        public int Quantity { get; set; } = 1;
+        public decimal Price { get; set; }
 
     }
 }

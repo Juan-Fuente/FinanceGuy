@@ -1,0 +1,5 @@
+D:\Projects\ProjectCS\ProjectCS\ProjectCS\obj\Debug\net6.0-windows\ProjectCS.csproj.AssemblyReference.cache
+D:\Projects\ProjectCS\ProjectCS\ProjectCS\obj\Debug\net6.0-windows\MainWindow.g.cs
+D:\Projects\ProjectCS\ProjectCS\ProjectCS\obj\Debug\net6.0-windows\App.g.cs
+D:\Projects\ProjectCS\ProjectCS\ProjectCS\obj\Debug\net6.0-windows\ProjectCS_MarkupCompile.cache
+D:\Projects\ProjectCS\ProjectCS\ProjectCS\obj\Debug\net6.0-windows\ProjectCS_MarkupCompile.lref

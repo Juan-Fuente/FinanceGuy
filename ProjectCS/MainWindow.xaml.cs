@@ -13,6 +13,23 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+namespace ProjectCS
+{
+
+        public partial class MainWindow : Window
+    {
+        public static List<Class1> cart = new List<Class1>();
+
+        private decimal Total { get; set; }
+
+    }
+
+    public MainWindow()
+    {
+        InitializeComponent();
+    }
+
+
     private void foodSelect(object sender, selectFood f)
 { 
         if (Items.Bills.Any(x => x.Name == (string) mainBillsBox.SelectedItem))
