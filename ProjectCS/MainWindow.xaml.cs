@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -222,6 +224,49 @@ namespace ProjectCS
 
                 RemoveQuantity();
             }
-        
+        // tramsform into PDF
+        /*private void finishButton_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (var item in itemsDataGrid.Items)
+            {
+                Class2 i = item as Class2;
+                cart.Add(i);
+            }
+
+            var doc = new Document(iTextSharp.text.PageSize.LETTER, 10, 10, 42, 35);
+            var pdf = PdfWriter.GetInstance(doc, new FileStream("order.pdf", FileMode.OpenOrCreate));
+            doc.Open();
+
+            iTextSharp.text.Font myFont = FontFactory.GetFont("Arial", 30, iTextSharp.text.Font.BOLD);
+            iTextSharp.text.Font myFont1 = FontFactory.GetFont("Arial", 20, iTextSharp.text.Font.BOLD);
+
+            iTextSharp.text.Paragraph p = new iTextSharp.text.Paragraph("Your orders:", myFont);
+
+            doc.Add(p);
+            doc.Add(new iTextSharp.text.Paragraph(" "));
+            doc.Add(new iTextSharp.text.Paragraph(" "));
+
+            doc.Add(new iTextSharp.text.Paragraph($"Name                  Price            Quantitiy", myFont1));
+            foreach (var item in cart)
+            {
+                doc.Add(new iTextSharp.text.Paragraph($"{item.Name}                        {item.Price:C}                                   {item.Quantity}"));
+            }
+
+            doc.Add(new iTextSharp.text.Paragraph(" "));
+            doc.Add(new iTextSharp.text.Paragraph(" "));
+
+            doc.Add(new iTextSharp.text.Paragraph($"The total of your order: {Total:C}", myFont1));
+            doc.Close();
+
+            System.Diagnostics.Process.Start("order.pdf");
+
+            itemsDataGrid.Items.Clear();
+            Total = 0.00M;
+            Tax = 0.00M;
+            taxBlock.Text = "$0.00";
+            totalTextBlock.Text = "$0.00";
+
+            RemoveQuantity();
+        }*/
     }
 }
