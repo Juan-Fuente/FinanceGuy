@@ -34,7 +34,7 @@ namespace ProjectCS
 
         private void foodSelect(object sender, SelectionChangedEventArgs b)
         {
-            if (Class2.foods.Any(x => x.Name == (string)billsComboBox.SelectedItem))
+            if (Class2.foods.Any(x => x.Name == (string)foodComboBox.SelectedItem))
             {
 
                 var price = Class2.foods.Find(x => x.Name == (string)foodComboBox.SelectedItem);
@@ -43,19 +43,19 @@ namespace ProjectCS
                 {
                     itemsDataGrid.Items.Remove(price);
                     price.Quantity++;
-                    itemsDataGrid.Items.Add(Class2.foods.Find(x => x.Name == (string)billsComboBox.SelectedItem));
+                    itemsDataGrid.Items.Add(Class2.foods.Find(x => x.Name == (string)foodComboBox.SelectedItem));
 
                     SalesTax(price);
 
-                    billsComboBox.SelectedIndex = -1;
+                    foodComboBox.SelectedIndex = -1;
                 }
                 else
                 {
-                    itemsDataGrid.Items.Add(Class2.foods.Find(x => x.Name == (string)billsComboBox.SelectedItem));
+                    itemsDataGrid.Items.Add(Class2.foods.Find(x => x.Name == (string)foodComboBox.SelectedItem));
 
                     SalesTax(price);
 
-                    billsComboBox.SelectedIndex = -1;
+                    foodComboBox.SelectedIndex = -1;
                 }
             }
         }
@@ -143,6 +143,31 @@ namespace ProjectCS
                 }
             }
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            foreach (var item in Class2.foods)
+            {
+                foodComboBox.Items.Add(item.Name);
+            }
+
+            foreach (var item in Class2.bills)
+            {
+                billsComboBox.Items.Add(item.Name);
+            }
+
+            foreach (var item in Class2.subs)
+            {
+                subsComboBox.Items.Add(item.Name);
+            }
+
+            foreach (var item in Class2.outings)
+            {
+                outingsComboBox.Items.Add(item.Name);
+            }
+        }
+
+
 
         private void SalesTax(Class1 Price)
         {
