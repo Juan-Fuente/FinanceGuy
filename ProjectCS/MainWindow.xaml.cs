@@ -190,5 +190,35 @@ namespace ProjectCS
             Total += total;
             totalTextBlock.Text = Total.ToString("C2");
         }
+        private static void RemoveQuantity()
+        {
+            foreach (var item in Class2.foods)
+            {
+                item.Quantity = 1;
+            }
+
+            foreach (var item in Class2.bills)
+            {
+                item.Quantity = 1;
+            }
+
+            foreach (var item in Class2.subs)
+            {
+                item.Quantity = 1;
+            }
+
+            foreach (var item in Class2.outings)
+            {
+                item.Quantity = 1;
+            }
+        }
+
+
+
+
+
+
+
+
     }
 }
