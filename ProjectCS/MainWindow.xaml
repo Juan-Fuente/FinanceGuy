@@ -20,6 +20,7 @@
                 </Style >
             </DataGrid.Resources >
 
+            
             <DataGrid.Columns >
                 <DataGridTextColumn Header = " Name"  Binding = "{Binding Name}" Width = "*" />
                 <DataGridTextColumn Header = " Category" Binding = "{Binding Category}" Width = "*" />
@@ -27,12 +28,6 @@
                 <DataGridTextColumn Header = " Price" Binding = "{Binding Price}" Width = "*" />
             </DataGrid.Columns >
  </DataGrid>
-        
-        
-        
-        
-        
-        
         
         
         
@@ -55,6 +50,5 @@
     <Label Content = "Outings" HorizontalAlignment = "Left" Margin = "267,318,0,0" VerticalAlignment = "Top" FontWeight = "Bold" FontSize = "24" FontFamily = "Tekton Pro" Height = "34" />
     <Label Content = "Subscriptions" HorizontalAlignment = "Left" Margin = "34,318,0,0" VerticalAlignment = "Top" FontWeight = "Bold" FontSize = "24" FontFamily = "Tekton Pro" Height = "34" />
 
-        <Button x:Name = "finishButton" Content = "Finish" HorizontalAlignment = "Left" Margin = "34,540,0,0" VerticalAlignment = "Top" Width = "155" Height = "46" FontWeight = "Bold" FontSize = "16" Click = "finishButton_Click" />
     </Grid >
 </Window >

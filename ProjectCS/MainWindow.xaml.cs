@@ -33,8 +33,7 @@ namespace ProjectCS
 
 
         // SelectionChangedEventArgs here
-
-        private void foodSelect(object sender, SelectionChangedEventArgs b)
+        private void foodComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (Class2.foods.Any(x => x.Name == (string)foodComboBox.SelectedItem))
             {
@@ -62,7 +61,7 @@ namespace ProjectCS
             }
         }
 
-        private void billsSelect(object sender, SelectionChangedEventArgs b)
+        private void billsComboBox_SelectionChanged(object sender, SelectionChangedEventArgs b)
         {
             if (Class2.bills.Any(x => x.Name == (string)billsComboBox.SelectedItem))
             {
@@ -90,7 +89,7 @@ namespace ProjectCS
             }
         }
 
-        private void subsSelect(object sender, SelectionChangedEventArgs b)
+        private void subsComboBox_SelectionChanged(object sender, SelectionChangedEventArgs b)
         {
             if (Class2.subs.Any(x => x.Name == (string)subsComboBox.SelectedItem))
             {
@@ -118,7 +117,7 @@ namespace ProjectCS
             }
         }
 
-        private void outingsSelect(object sender, SelectionChangedEventArgs b)
+        private void outingsComboBox_SelectionChanged(object sender, SelectionChangedEventArgs b)
         {
             if (Class2.outings.Any(x => x.Name == (string)outingsComboBox.SelectedItem))
             {
@@ -224,7 +223,10 @@ namespace ProjectCS
 
                 RemoveQuantity();
             }
-        // tramsform into PDF
+
+        
+        
+        
         /*private void finishButton_Click(object sender, RoutedEventArgs e)
         {
             foreach (var item in itemsDataGrid.Items)
