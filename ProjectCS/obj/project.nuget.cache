@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "qe5ho7vhZJTtFag8ke9ulVWpZdwYHmHoq5SUMzDnOL2eH1wwrbJCkETJie2SOVIRYZxpWHzcCO2nwW0eAHxVuw==",
+  "dgSpecHash": "NEyKLNLcgq89a9z81Oj2xIMiNbVufzDZT5hTCwKToOu40UDs/SCm5mZjZ+zpNqAo4hys2/lqeP7cVfO2z8mQWQ==",
   "success": true,
   "projectFilePath": "D:\\Projects\\ProjectCS\\ProjectCS\\ProjectCS\\ProjectCS.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\juand\\.nuget\\packages\\google.apis\\1.63.0\\google.apis.1.63.0.nupkg.sha512",
+    "C:\\Users\\juand\\.nuget\\packages\\google.apis.auth\\1.63.0\\google.apis.auth.1.63.0.nupkg.sha512",
+    "C:\\Users\\juand\\.nuget\\packages\\google.apis.calendar.v3\\1.63.0.3171\\google.apis.calendar.v3.1.63.0.3171.nupkg.sha512",
+    "C:\\Users\\juand\\.nuget\\packages\\google.apis.core\\1.63.0\\google.apis.core.1.63.0.nupkg.sha512",
+    "C:\\Users\\juand\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\juand\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
+    "C:\\Users\\juand\\.nuget\\packages\\system.management\\7.0.2\\system.management.7.0.2.nupkg.sha512"
+  ],
   "logs": []
 }
