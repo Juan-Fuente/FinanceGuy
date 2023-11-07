@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800">
     <Grid>
-        
+        <Label x:Name="UpxomingCalendarEvents" Content="Spending" Margin="0,63,0,0" VerticalAlignment="Top" FontSize="48" HorizontalAlignment="Center" FontWeight="Bold" UseLayoutRounding="True"/>
+        <Label x:Name="CalendarEvents" Content="Calendar Events" Margin="0,217,0,0" VerticalAlignment="Top" FontSize="36" HorizontalAlignment="Center" FontWeight="Bold"/>
+
     </Grid>
 </Window>

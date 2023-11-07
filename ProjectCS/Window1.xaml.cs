@@ -19,6 +19,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
 namespace ProjectCS
 {
     /// <summary>
@@ -29,9 +30,12 @@ namespace ProjectCS
 
         static string[] Scopes = { CalendarService.Scope.CalendarReadonly };
         static string ApplicationName = "Google Calendar API .NET Quickstart";
+
+
         public Window1()
         {
             InitializeComponent();
+            GoogleAPI();
         }
 
 
@@ -66,33 +70,36 @@ namespace ProjectCS
             request.TimeMin = DateTime.Now;
             request.ShowDeleted = false;
             request.SingleEvents = true;
-            request.MaxResults = 10;
+            request.MaxResults = 5;
             request.OrderBy = EventsResource.ListRequest.OrderByEnum.StartTime;
 
             // List events.
             Events events = request.Execute();
-            Console.WriteLine("Upcoming events:");
             if (events.Items == null || events.Items.Count == 0)
             {
-                Console.WriteLine("No upcoming events found.");
-                return;
-            }
-            foreach (var eventItem in events.Items)
-            {
-                string when = eventItem.Start.DateTime.ToString();
-                if (String.IsNullOrEmpty(when))
+                CalendarEvents.Content = "";
+                foreach (var eventItem in events.Items)
                 {
-                    when = eventItem.Start.Date;
+                    CalendarEvents.Content += eventItem.Summary + Environment.NewLine;
                 }
-                Console.WriteLine("{0} ({1})", eventItem.Summary, when);
+                
             }
 
-             catch (FileNotFoundException e)
+             else
             {
-                Console.WriteLine(e.Message);
+                CalendarEvents.Content = "No financial events";
             }
         }
-           
+
+        private void dispatcherTimer_Tick(object sender, EventArgs e)
+        {
+            System.Windows.Threading.DispatcherTimer dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
+
+            dispatcherTimer.Tick += dispatcherTimer_Tick;
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
+            dispatcherTimer.Start();
+            GoogleAPI();
+        }
     }
 }
    
