@@ -1,32 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\Version 2\\ProjectCSv2\\ProjectCS\\ProjectCS.csproj": {}
+    "D:\\Projects\\Version 2\\ProjectCSv2\\ProjectCSv2\\ProjectCSv2.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\Version 2\\ProjectCSv2\\ProjectCS\\ProjectCS.csproj": {
+    "D:\\Projects\\Version 2\\ProjectCSv2\\ProjectCSv2\\ProjectCSv2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Version 2\\ProjectCSv2\\ProjectCS\\ProjectCS.csproj",
-        "projectName": "ProjectCS",
-        "projectPath": "D:\\Projects\\Version 2\\ProjectCSv2\\ProjectCS\\ProjectCS.csproj",
+        "projectUniqueName": "D:\\Projects\\Version 2\\ProjectCSv2\\ProjectCSv2\\ProjectCSv2.csproj",
+        "projectName": "ProjectCSv2",
+        "projectPath": "D:\\Projects\\Version 2\\ProjectCSv2\\ProjectCSv2\\ProjectCSv2.csproj",
         "packagesPath": "C:\\Users\\juand\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Version 2\\ProjectCSv2\\ProjectCS\\obj\\",
+        "outputPath": "D:\\Projects\\Version 2\\ProjectCSv2\\ProjectCSv2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\juand\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0-windows"
+          "net7.0-windows"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0-windows7.0": {
-            "targetAlias": "net6.0-windows",
+          "net7.0-windows7.0": {
+            "targetAlias": "net7.0-windows",
             "projectReferences": {}
           }
         },
@@ -37,8 +37,22 @@
         }
       },
       "frameworks": {
-        "net6.0-windows7.0": {
-          "targetAlias": "net6.0-windows",
+        "net7.0-windows7.0": {
+          "targetAlias": "net7.0-windows",
+          "dependencies": {
+            "BouncyCastle.NetCore": {
+              "target": "Package",
+              "version": "[2.2.1, )"
+            },
+            "Google.Apis.Calendar.v3": {
+              "target": "Package",
+              "version": "[1.63.0.3171, )"
+            },
+            "iTextSharp": {
+              "target": "Package",
+              "version": "[5.5.13.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
