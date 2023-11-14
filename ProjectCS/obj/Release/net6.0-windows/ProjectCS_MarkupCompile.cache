@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-D:\Projects\Version 2\ProjectCSv2\ProjectCS\obj\Debug\net6.0-windows\
+D:\Projects\Version 2\ProjectCSv2\ProjectCS\obj\Release\net6.0-windows\
 ProjectCS
 none
 false
-TRACE;DEBUG;NET;NET6_0;NETCOREAPP
+TRACE;RELEASE;NET;NET6_0;NETCOREAPP
 D:\Projects\Version 2\ProjectCSv2\ProjectCS\App.xaml
 11407045341
 
